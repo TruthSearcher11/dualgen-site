@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatGPT Prompt Generator — prompts locked to a hook</title>
+  <meta name="description" content="Free ChatGPT prompt generator that also writes a scroll-stopping hook. Paste the prompt into ChatGPT or Grok and get content that starts with a strong first line.">
+  <link rel="canonical" href="https://dualgenai.com/chatgpt-prompt-generator.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DualGen AI">
+  <meta property="og:title" content="ChatGPT Prompt Generator — prompts locked to a hook">
+  <meta property="og:description" content="Free ChatGPT prompt generator that also writes a scroll-stopping hook. Paste the prompt into ChatGPT or Grok and get content that starts with a strong first line.">
+  <meta property="og:url" content="https://dualgenai.com/chatgpt-prompt-generator.html">
+  <meta property="og:image" content="https://dualgenai.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Prompt Generator — prompts locked to a hook">
+  <meta name="twitter:description" content="Free ChatGPT prompt generator that also writes a scroll-stopping hook. Paste the prompt into ChatGPT or Grok and get content that starts with a strong first line.">
+  <meta name="twitter:image" content="https://dualgenai.com/assets/og-image.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <img class="mark" src="assets/logo.svg" alt="" width="32" height="32">
+          DualGen
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html#generator">Generator</a>
+          <a href="index.html#how-it-works">How it works</a>
+          <a href="sponsor.html">Sponsor</a>
+        </nav>
+        <a class="btn header-cta" href="index.html#signup">Get 100 hooks</a>
+      </div>
+    </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow"><span class="dots" aria-hidden="true"><span class="dot dot-teal"></span><span class="dot dot-copper"></span></span> Free dual generator</p>
+        <h1>ChatGPT prompt generator</h1>
+        <p>Most prompt generators give you a brief and hope the model invents a first line. DualGen writes the hook first, then a paste-ready prompt for ChatGPT, Grok, or similar that is required to start with that hook.</p>
+      </div>
+    </header>
+    <section id="generator" class="generator" data-default-platform="tiktok" data-default-goal="">
+      <div class="wrap">
+        
+        <form id="gen-form" class="gen-card" novalidate>
+          <div class="gen-fields">
+            <div class="field field-topic">
+              <label for="topic">Topic or niche <span class="fineprint" style="text-transform:none;letter-spacing:0;">(required)</span></label>
+              <input id="topic" name="topic" type="text" required placeholder="e.g. meal prep for busy parents, real estate listing videos, Etsy shop tips" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="audience">Audience</label>
+              <input id="audience" name="audience" type="text" placeholder="e.g. new realtors, indie sellers, gym owners" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="platform">Platform</label>
+              <select id="platform" name="platform">
+                <option value="tiktok" selected>TikTok</option>
+                <option value="reels">Instagram Reels</option>
+                <option value="youtube">YouTube</option>
+                <option value="x">X</option>
+                <option value="linkedin">LinkedIn</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="tone">Tone</label>
+              <select id="tone" name="tone">
+                <option value="direct" selected>Direct</option>
+                <option value="casual">Casual</option>
+                <option value="witty">Witty</option>
+                <option value="bold">Bold</option>
+                <option value="professional">Professional</option>
+                <option value="warm">Warm</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="goal">Goal</label>
+              <select id="goal" name="goal">
+                <option value="" selected>Any</option>
+                <option value="educate">Educate</option>
+                <option value="sell">Sell</option>
+                <option value="story">Story</option>
+                <option value="controversy">Controversy</option>
+                <option value="list">List</option>
+                <option value="before-after">Before / after</option>
+              </select>
+            </div>
+            <div class="gen-actions">
+              <button class="btn" type="submit">Generate 3 pairs</button>
+              <button class="btn btn-secondary js-regen" type="button" hidden>Regenerate</button>
+            </div>
+          </div>
+          <p class="js-gen-error" hidden></p>
+          <p class="tool-note">Built from proven hook formulas, then filled with your topic, audience, platform, and tone. DualGen runs in your browser — no account, no API key. It is not a live AI model.</p>
+        </form>
+        <div id="gen-results" hidden></div>
+
+        
+        <!--
+          MailerLite embedded form
+          ----------------------------------------------------------------
+          Replace MAILERLITE_FORM_ACTION with the form action URL from
+          MailerLite. In MailerLite: Forms > Embedded form > HTML, then
+          copy the action="..." value. It looks like:
+
+          https://assets.mailerlite.com/jsonp/XXXXXXXX/forms/YYYYYYYY/subscribe
+
+          Keep method="post" and the email field name fields[email].
+          Set the form's success / thank-you URL in MailerLite to:
+          https://dualgenai.com/thank-you.html
+          ----------------------------------------------------------------
+        -->
+        <div class="pack-offer js-pack-offer" id="signup">
+          <p class="eyebrow"><span class="dots" aria-hidden="true"><span class="dot dot-teal"></span><span class="dot dot-copper"></span></span> Free pack</p>
+          <h2>Get 100 bonus hooks + the weekly prompt &amp; hook pack</h2>
+          <p>Free. One weekly email with fresh prompt and hook ideas, plus a 100-hook PDF on the thank-you page. The generator stays free either way. <span class="fineprint">You've generated <span class="js-pack-count">0</span> so far — the tool never locks.</span></p>
+          <form id="signup-chatgpt-prompt-generator" class="signup js-signup" action="https://assets.mailerlite.com/jsonp/2811041/forms/204630322453678049/subscribe" method="post">
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+            <label class="sr-only" for="email-chatgpt-prompt-generator">Email address</label>
+            <input id="email-chatgpt-prompt-generator" name="fields[email]" type="email" autocomplete="email" required placeholder="you@company.com">
+            <button class="btn" type="submit">Send me the pack</button>
+          </form>
+          <p class="fineprint">Unsubscribe anytime. No spam.</p>
+          <p class="form-note" role="status"></p>
+        </div>
+
+        <p class="sponsor-slot"><span class="badge-placeholder">Placeholder — sponsor slot</span> Generator-page sponsor placement. Details on the <a href="sponsor.html">media kit</a>.</p>
+      </div>
+    </section>
+    <section>
+      <div class="wrap prose-page">
+        
+        <h2>Why the prompt is locked to a hook</h2>
+        <p>If you ask ChatGPT to “write a TikTok script about meal prep,” you often get a polite introduction and a hook that arrives too late. DualGen flips the order. You leave with a hook you can already say on camera, and a prompt that tells the model: do not write anything before this line, match this platform and tone, and finish a usable draft.</p>
+        <p>Pick a platform so the prompt includes the right length and format — a 20-second Reel is not a LinkedIn post. Then paste the prompt as-is, or add your own extra constraints (“no slang,” “include this product name,” “keep it under 80 words”).</p>
+        <h2>What you can use it for</h2>
+        <p>Scripts, captions, threads, explainers, soft-sell offers, and before/after stories. The generator includes frameworks for educate, sell, story, controversy, list, and before/after goals. It is not a substitute for a specialist prompt you have already tuned for a long workflow; it is the fastest way to get a first-line-plus-brief when you need to post today.</p>
+        <div class="faq">
+          <h2>Questions</h2>
+          <details open><summary>Does this call ChatGPT for me?</summary><p>No. DualGen does not use an API key and does not send your topic to a model. You copy the prompt and paste it into ChatGPT, Grok, or another tool you already use.</p></details>
+          <details><summary>Can I share a prompt with a teammate?</summary><p>Yes. Each pair has a share link and a copy-both button. The link reopens this page with the same inputs and that hook + prompt.</p></details>
+        </div>
+    
+      </div>
+    </section>
+  </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>&copy; 2026 DualGen AI. A free prompt and hook generator.</p>
+        <nav aria-label="Footer">
+          <a href="sponsor.html">Sponsor</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="index.html#signup">Get the pack</a>
+        </nav>
+        <nav class="seo-links" aria-label="Generators">
+          <a href="tiktok-hook-generator.html">TikTok hook generator</a>
+          <a href="youtube-hook-generator.html">YouTube hook generator</a>
+          <a href="instagram-reel-hooks.html">Instagram Reel hooks</a>
+          <a href="chatgpt-prompt-generator.html">ChatGPT prompt generator</a>
+        </nav>
+      </div>
+    </footer>
+
+  <script src="js/dualgen.js" defer></script>
+</body>
+</html>
